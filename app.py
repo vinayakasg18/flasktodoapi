@@ -1,13 +1,11 @@
-from operator import imod
-from flask import Flask, app, render_template, url_for, request, redirect
-from flask.wrappers import Request
+from flask import Flask, app, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
 
 # SQL config
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
 # Three /// means it is relative path and four //// is absolute path
 db = SQLAlchemy(app) # Initialize the database with the app's configs
 
